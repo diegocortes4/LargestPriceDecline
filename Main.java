@@ -27,16 +27,14 @@ public class Main {
       for (int k = 1; k <= n; k++) {
         double priceK = p * (Math.sin(a * k + b) + Math.cos(c * k + d) + 2);
 
-         if (priceK > maxPrice) {
-             maxPrice = priceK;
-
-         }
+        if (priceK > maxPrice) {
+          maxPrice = priceK;
+        }
 
         double decline = maxPrice - priceK;
 
         if (decline > maxDecline) {
           maxDecline = decline;
-
         }
 
         if (priceK < minRightPrice) {
@@ -44,8 +42,9 @@ public class Main {
         }
       }
 
-
-      System.out.printf("%.6f%n" , maxDecline);
+      System.out.printf("Maximum Price: %.6f%n", maxPrice);
+      System.out.printf("Minimum Right Price: %.6f%n", minRightPrice);
+      System.out.printf("Maximum Decline: %.6f%n", maxDecline);
     }
   }
 }
